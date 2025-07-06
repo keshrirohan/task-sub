@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* Define custom colors with @theme */
+@theme {
+  --color-background: #0f0f0f;
+  --color-primary: #3c82f6;
+  --color-secondary: #9ca3af;
+  --color-highlight: #a855f7;
+}
+
+/* index.css */
+body,
+html {
+  @apply m-0 p-0;
+}
