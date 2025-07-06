@@ -7,7 +7,8 @@ const TaskTable = () => {
     // Fetch data from backend
     const fetchTasks = async () => {
       try {
-        const response = await fetch("http://localhost:3000/daata/"); // change route if needed
+        const url = import.meta.env.VITE_BACKEND_URL;
+        const response = await fetch(`${url}/daata`); // change route if needed
         const result = await response.json();
         setTasks(result.data || []);
       } catch (error) {

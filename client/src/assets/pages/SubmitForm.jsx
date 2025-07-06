@@ -108,8 +108,8 @@ const SubmitForm = () => {
     setIsSubmitting(true);
 
     try {
-      const url = "http://localhost:3000/submit";
-      const response = await fetch(url, {
+      const url = import.meta.env.VITE_BACKEND_URL;
+      const response = await fetch(`${url}/submit`, {
         method: "POST", // ✅ correct casing
         headers: {
           "Content-Type": "application/json",
