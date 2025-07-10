@@ -109,16 +109,19 @@ const SubmitForm = () => {
 
     try {
       const url = import.meta.env.VITE_BACKEND_URL;
-      const response = await fetch(`${url}/submit`, {
-        method: "POST", // ✅ correct casing
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        `https://task-sub-mm0j.onrender.com/submit`,
+        {
+          method: "POST", // ✅ correct casing
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const result = await response.json();
-      console.log(result);
+      // console.log(result);
 
       // ✅ Alert message from backend
       // handlefailed(result.message);

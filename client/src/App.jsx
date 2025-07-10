@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<SubmitForm />} />
-        <Route path="/submit/data/summerinternship" element={<TaskTable />}></Route>
+        <Route path="https://submit-your-task.onrender.com/submit/data/summerinternship/" element={<TaskTable />}></Route>
       </Routes>
       <ToastContainer />
     </BrowserRouter>
